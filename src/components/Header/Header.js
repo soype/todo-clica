@@ -1,6 +1,6 @@
 import React from 'react';
 
-import AddTask from './AddTask';
+import AddButton from './AddButton';
 
 import classes from './header.module.css';
 
@@ -11,7 +11,7 @@ const Header = (props) => {
             <h1 className={classes.logo}>To Do App</h1>
         </div>
         <div className={classes["menu-container"]}>
-            <AddTask>AGREGAR TAREA</AddTask>
+            <AddButton>AGREGAR TAREA</AddButton>
         </div>
     </div>
     )

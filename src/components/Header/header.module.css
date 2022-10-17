@@ -1,9 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
 .header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(98, 201, 167);
+  background-color: #3A5864;
   padding: 0 4rem 0;
   color: white;
   height: 6rem;
@@ -22,7 +32,9 @@
 }
 
 .button {
-  background-color: rgb(57, 134, 108);
+  background-color: #A9FBD7;
+  color: #2F3E44;
+  font-weight: bold;
   display: flex;
   justify-content: center;
   align-items: center;

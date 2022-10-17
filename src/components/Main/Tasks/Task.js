@@ -1,4 +1,4 @@
-import classes from './tasks.module.css';
+import classes from '../main.module.css';
 
 
 const Task = props => {

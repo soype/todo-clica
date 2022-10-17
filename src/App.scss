@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+$blue-ui: #3A5864;
+$green-light: #D7FDEC;
+$green-focus: #A9FBD7;
+$green-font: #2F3E44;
+
+.App{
+    display: flex;
+    flex-direction: column;
+}

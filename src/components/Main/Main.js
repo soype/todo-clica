@@ -11,7 +11,9 @@ const Main = props => {
     // Acá almaceno el id de la tarea que se va a desplegar
     const [displayedTask, setDisplayedTask] = useState(0);
 
-    const tareas = [
+
+    const [tareas, setTareas] = useState(
+    [
         {
             titulo: 'Sacar a pasear al perro',
             descripcion: 'Dar una vuelta a la manzana con el perro.',
@@ -32,7 +34,7 @@ const Main = props => {
             descripcion: 'Manuelita se esta quedando sin alimento :(',
             fecha_creacion: '22/07/2022 12:00',
         },
-    ]
+    ]);
 
     // Recibe el id desde Task List y cambia el estado de Displayed Task que luego
     // pasa a TaskDetail, donde se va a desplegar el detalle de la tarea seleccionada.
@@ -44,9 +46,7 @@ const Main = props => {
         <div className={classes.main}>
             <div className={classes["tasks-container"]}>
                 <TaskList tareas={tareas} displayId={displayedTask} onTaskFocus={displayTaskHandler}></TaskList>
-                <div className={classes["task-detail"]}>
-                    <TaskDetail displayId={displayedTask} tareas={tareas}></TaskDetail>
-                </div>
+                <TaskDetail displayId={displayedTask} tareas={tareas}></TaskDetail>
             </div>
             
         </div>

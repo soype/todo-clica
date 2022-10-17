@@ -1,0 +1,68 @@
+// Importar colores
+@use '../../App.scss';
+//
+
+.modal{
+    z-index: 3;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.backdrop{
+    position:absolute;
+    z-index: 4;
+    height: 100vh;
+    background-color: rgba(129, 129, 129, 0.8);
+}
+
+
+// Form
+
+.add-task{
+    display: flex;
+    flex-direction: column;
+    background-color: App.$green-light;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 1rem rgba(0,0,0,0.3);
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 1rem;
+    width: 12rem;
+    height: 1rem;
+    padding: 1rem;
+    &:focus{
+        background-color: aliceblue;
+        outline: none;
+    }
+}
+
+.description{
+    border: none;
+    width: 12rem;
+    padding: 1rem;r
+    &:focus{
+        background-color: aliceblue;
+        outline: none;
+    }
+    border-radius: 1rem;
+    resize: none;
+
+}
+
+.submit{
+    height: 2rem;
+    width: 10rem;
+    border: none;
+    border-radius: 1rem;
+    background-color: App.$green-focus;
+    color: App.$green-font;
+}

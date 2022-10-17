@@ -1,9 +1,14 @@
+// Importar colores
+@use '../../App.scss';
+//
+
+
 .header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(98, 201, 167);
+    background-color: App.$blue-ui;
     padding: 0 4rem 0;
     color: white;
     height: 6rem;
@@ -22,7 +27,9 @@
 }
 
 .button{
-    background-color: rgb(57, 134, 108);
+    background-color: App.$green-focus;
+    color: App.$green-font;
+    font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;

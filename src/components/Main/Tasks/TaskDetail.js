@@ -1,4 +1,4 @@
-import classes from './tasks.module.css';
+import classes from '../main.module.css';
 
 
 const TaskDetail = props => {
@@ -7,12 +7,12 @@ const TaskDetail = props => {
     // Filtro el listado de tareas con el id y despliego esa info.
 
     return(
-        <div className={classes['task-detail']}>
+        <div className={classes["task-detail"]}>
             <h3 className={classes['task-detail-title']}>
                 {props.tareas[props.displayId].titulo}
             </h3>
             <p className={classes['task-detail-date']}>
-                {props.tareas[props.displayId].fecha_creacion}
+            Creado el {props.tareas[props.displayId].fecha_creacion.substring(0,10)} a las {props.tareas[props.displayId].fecha_creacion.substring(11,16)}
             </p>
             <p className={classes['task-detail-desc']}>
                 {props.tareas[props.displayId].descripcion}

@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 
 import Task from './Task';
 
-import classes from './tasks.module.css';
+import classes from '../main.module.css';
 
 
 const TaskList = props => {
