@@ -1,0 +1,102 @@
+.task-list {
+  background-color: rgb(203, 253, 190);
+  width: 24rem;
+  padding: 2rem;
+  border-radius: 2rem;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+}
+.task-list h2 {
+  margin: 0 1rem 1rem;
+}
+
+.task {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  padding: 0.3rem 1rem 0.3rem;
+  margin: 0 0 0.3rem;
+  border-radius: 2rem;
+}
+.task h4 {
+  font-size: 1rem;
+  margin: 0.5rem 0 0.5rem;
+}
+.task p {
+  font-size: 0.8rem;
+  color: rgb(98, 98, 98);
+  margin: 1rem 0 1rem;
+}
+
+.focus {
+  display: flex;
+  flex-direction: row;
+  padding: 0.3rem 1rem 0.3rem;
+  margin: 0 0 0.3rem;
+  border-radius: 2rem;
+  background-color: rgb(228, 254, 228);
+}
+.focus h4 {
+  font-size: 1rem;
+  margin: 0.5rem 0 0.5rem;
+}
+.focus p {
+  font-size: 0.8rem;
+  color: rgb(98, 98, 98);
+  margin: 1rem 0 1rem;
+}
+
+.task-info {
+  width: 16rem;
+}
+
+.delete {
+  width: 4rem;
+  margin: 0.3rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.delete svg:hover {
+  cursor: pointer;
+  -webkit-animation: wiggle 1s forwards;
+          animation: wiggle 1s forwards;
+}
+
+@-webkit-keyframes wiggle {
+  10%, 90% {
+    transform: translateX(-1px);
+  }
+  20%, 80% {
+    transform: translateX(2px);
+  }
+  30%, 50%, 70% {
+    transform: translateX(-4px);
+  }
+  40%, 60% {
+    transform: translateX(4px);
+  }
+}
+
+@keyframes wiggle {
+  10%, 90% {
+    transform: translateX(-1px);
+  }
+  20%, 80% {
+    transform: translateX(2px);
+  }
+  30%, 50%, 70% {
+    transform: translateX(-4px);
+  }
+  40%, 60% {
+    transform: translateX(4px);
+  }
+}
+.task-detail h3 {
+  margin-bottom: 1rem;
+}
+
+.task-detail-date {
+  font-size: 0.8rem;
+  color: gray;
+  margin-bottom: 1rem;
+}/*# sourceMappingURL=tasks.module.css.map */

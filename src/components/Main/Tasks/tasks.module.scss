@@ -1,0 +1,97 @@
+.task-list{
+    background-color: rgb(203, 253, 190);
+    width: 24rem;
+    padding: 2rem;
+    border-radius: 2rem;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.4);
+    h2{
+        margin: 0 1rem 1rem;
+    }
+}
+
+.task{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    padding: .3rem 1rem .3rem;
+    margin: 0 0 .3rem;
+    border-radius: 2rem;
+    // height: 5rem;
+    h4{
+        font-size: 1rem;
+        margin: .5rem 0 .5rem;
+    }
+    p{
+        font-size: .8rem;
+        color: rgb(98, 98, 98);
+        margin: 1rem 0 1rem;  
+    }
+}
+
+.focus{
+    display: flex;
+    flex-direction: row;
+    padding: .3rem 1rem .3rem;
+    margin: 0 0 .3rem;
+    border-radius: 2rem;
+    // height: 5rem;
+    h4{
+        font-size: 1rem;
+        margin: .5rem 0 .5rem;
+    }
+    p{
+        font-size: .8rem;
+        color: rgb(98, 98, 98);
+        margin: 1rem 0 1rem;  
+    }
+    background-color: rgb(228, 254, 228);
+}
+
+.task-info{
+    width: 16rem;
+}
+
+.delete{
+    width: 4rem;
+    margin: .3rem;  
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    svg:hover{
+        cursor: pointer;
+        animation: wiggle 1s forwards;
+    }
+}
+
+@keyframes wiggle {
+
+    10%, 90% {
+        transform: translateX(-1px);
+      }
+      
+      20%, 80% {
+        transform: translateX(2px);
+      }
+    
+      30%, 50%, 70% {
+        transform: translateX(-4px);
+      }
+    
+      40%, 60% {
+        transform: translateX(4px);
+      } 
+}
+
+// Detalle de la tarea desplegada en el momento
+
+.task-detail{
+    h3{
+        margin-bottom: 1rem;
+    }
+}
+
+.task-detail-date{
+    font-size: .8rem;
+    color: gray;
+    margin-bottom: 1rem;
+}

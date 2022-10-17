@@ -1,0 +1,34 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(98, 201, 167);
+  padding: 0 4rem 0;
+  color: white;
+  height: 6rem;
+}
+
+.logo-container {
+  text-align: center;
+  width: 30vw;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30vw;
+}
+
+.button {
+  background-color: rgb(57, 134, 108);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  width: 10rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 2rem;
+}/*# sourceMappingURL=header.module.css.map */
