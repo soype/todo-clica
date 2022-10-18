@@ -38,6 +38,9 @@
     font-size: .9rem;
     cursor: pointer;
     border-radius: 2rem;
+    &:hover{
+        background-color: App.$green-focus-light;
+    }
 }
 
 @media screen and (max-width: 900px) {

@@ -78,4 +78,7 @@
     border-radius: 1rem;
     background-color: App.$green-focus;
     color: App.$green-font;
+    &:hover{
+        background-color: App.$green-focus-light;
+    }
 }

@@ -1,11 +1,13 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .App {
   display: flex;
   flex-direction: column;
+  height: 100vh;
 }
 
 .modal {
@@ -79,4 +81,7 @@
   border-radius: 1rem;
   background-color: #A9FBD7;
   color: #2F3E44;
+}
+.submit:hover {
+  background-color: #c9f8e4;
 }/*# sourceMappingURL=modal.module.css.map */

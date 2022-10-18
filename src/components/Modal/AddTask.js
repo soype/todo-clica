@@ -24,7 +24,7 @@ const AddTask = props => {
         <form action="" onSubmit={taskSubmitHandler} className={classes['add-task']}> 
             <input id="title" type="text" className={classes.title} onChange={titleHandler} value={title} required='required' placeholder="Nombre" />
             <textarea id="description" name="" cols="30" rows="10" className={classes.description} onChange={descHandler} value={desc} placeholder="Descripcion"></textarea>
-            <button className={classes.submit}>Add task</button>
+            <button className={classes.submit}>Agregar tarea</button>
         </form>
     )
 }

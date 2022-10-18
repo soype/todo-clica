@@ -28,7 +28,7 @@
 
 .task-list{
     background-color: App.$green-light;
-    width: 24rem;
+    width: 30rem;
     padding: 2rem;
     border-radius: 2rem;
     box-shadow: 1px 1px 10px rgba(0,0,0,0.4);
@@ -131,9 +131,10 @@
 
 // Responsive
 
-@media all and (min-width: 1750px) {
+@media all and (max-width: 1500px)
+{
     .task-list{
-        width: 30rem;
+        width: 24rem;
     }
 }
 

@@ -46,6 +46,9 @@
   cursor: pointer;
   border-radius: 2rem;
 }
+.button:hover {
+  background-color: #c9f8e4;
+}
 
 @media screen and (max-width: 900px) {
   .logo {
