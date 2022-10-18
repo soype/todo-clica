@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
 }
 
 $blue-ui: #3A5864;
@@ -11,14 +10,10 @@ $green-focus-light: #c9f8e4;
 $green-focus: #A9FBD7;
 $green-font: #2F3E44;
 
-// @font-face {
-//     font-family: 'Coolvetica';
-//     src: url(./media/coolvetica_rg.otf);
-// }
-
 
 .App{
     display: flex;
     flex-direction: column;
     height: 100vh;
+    overflow-y: hidden;
 }
