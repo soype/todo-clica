@@ -37,6 +37,9 @@ function App() {
     },
   ]);
 
+  // Identificar que ID es el siguente a asignar
+  const [nextId, setNextId] = useState(tareas.length);
+
   // Logica para el ingreso de una nueva tarea
   const submitHandler = (title, desc) => {
     let fecha = new Date().toLocaleString("es-AR");
@@ -48,10 +51,11 @@ function App() {
           titulo: title,
           descripcion: desc,
           fecha_creacion: fecha.toString(),
-          id: Math.random(),
+          id: nextId,
         },
       ];
     });
+    setNextId(nextId + 1);
   };
 
   const deleteHandler = (id) => {

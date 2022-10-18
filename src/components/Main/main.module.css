@@ -167,6 +167,7 @@
     justify-content: center;
     text-align: center;
     padding: 0;
+    margin: 0 0 1rem;
   }
   .focus {
     display: flex;
@@ -174,6 +175,7 @@
     justify-content: center;
     text-align: center;
     padding: 0;
+    margin: 0 0 1rem;
   }
   .focus .task-desc {
     display: block;
