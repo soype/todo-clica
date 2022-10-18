@@ -17,7 +17,7 @@ const TaskList = (props) => {
   return (
     <div className={classes["task-list"]}>
       <h2>Mis Tareas</h2>
-      {props.tareas.map((tarea, index) => (
+      {props.tareas.map((tarea) => (
         <Task
           taskView={taskViewHandler}
           displayId={props.displayId}

@@ -22,13 +22,15 @@ const Main = (props) => {
   return (
     <div className={classes.main}>
       <div className={classes["tasks-container"]}>
-        <TaskList
+        {props.hasTareas && <TaskList
           tareas={props.tareas}
           displayId={tarea[0].id}
           onDelete={deleteHandler}
           onTaskFocus={displayTaskHandler}
-        ></TaskList>
-        <TaskDetail tarea={tarea[0]}></TaskDetail>
+          hayTareas={props.hayTareas}
+        ></TaskList>}
+        {props.hasTareas && <TaskDetail tarea={tarea[0]}></TaskDetail>}
+        {!props.hasTareas && <h2 className={classes['no-task']}>Seleccioná "Agregar tarea" para comenzar!</h2>}
       </div>
     </div>
   );

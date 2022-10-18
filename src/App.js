@@ -37,10 +37,12 @@ function App() {
     },
   ]);
 
+  const [hasTareas, setHasTareas] = useState(true);
+
   // Identificar que ID es el siguente a asignar
   const [nextId, setNextId] = useState(tareas.length);
 
-  // Logica para el ingreso de una nueva tarea
+  // Logica para el ingreso de una nueva tarea. Si no hay tareas, muestra nuevamente la lista.
   const submitHandler = (title, desc) => {
     let fecha = new Date().toLocaleString("es-AR");
 
@@ -56,10 +58,17 @@ function App() {
       ];
     });
     setNextId(nextId + 1);
+    setHasTareas(true);
   };
 
+  // Si quedaba una sola tarea, no muestra más la lista.
   const deleteHandler = (id) => {
     setTareas(tareas.filter((tarea) => tarea.id !== id));
+    if(tareas.length <= 1){
+      setHasTareas(false);
+    }else{
+      setHasTareas(true);
+    }
   };
 
   // Activa o desactiva el modal de ingreso de tareas
@@ -80,7 +89,7 @@ function App() {
         ></Modal>
       )}
       <Header onShowModal={displayModalHandler}></Header>
-      <Main tareas={tareas} onDelete={deleteHandler}></Main>
+      <Main tareas={tareas} hasTareas={hasTareas} onDelete={deleteHandler}></Main>
       <Footer></Footer>
     </div>
   );

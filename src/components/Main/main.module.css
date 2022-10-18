@@ -84,12 +84,15 @@
   width: 16rem;
 }
 
-.delete {
-  width: 4rem;
-  margin: 0.3rem;
+.delete-container {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+}
+
+.delete {
+  width: 2rem;
+  margin: 0.3rem;
 }
 .delete svg:hover {
   cursor: pointer;
@@ -134,6 +137,10 @@
   font-size: 0.8rem;
   color: gray;
   margin-bottom: 1rem;
+}
+
+.no-task {
+  text-align: center;
 }
 
 @media all and (max-width: 1500px) {

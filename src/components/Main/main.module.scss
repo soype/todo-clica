@@ -76,12 +76,15 @@
     width: 16rem;
 }
 
-.delete{
-    width: 4rem;
-    margin: .3rem;  
+.delete-container{
     display: flex;
     justify-content: flex-end;
     align-items: center;
+}
+
+.delete{
+    width: 2rem;
+    margin: .3rem; 
     svg:hover{
         cursor: pointer;
         animation: wiggle 1s forwards;
@@ -121,6 +124,10 @@
     margin-bottom: 1rem;
 }
 
+
+.no-task{
+    text-align: center;
+}
 
 // Responsive
 
