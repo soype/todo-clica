@@ -11,7 +11,7 @@ const Main = (props) => {
 
   // Recibe el id de la tarea que acaba de ser clickeada para destacar. Altera el useState.
   const displayTaskHandler = (id) => {
-    setTarea(props.tareas.filter((tarea) => tarea.id == id));
+    setTarea(props.tareas.filter((tarea) => tarea.id === id));
   };
 
   // Recibe el id de la tarea seleccionada para eliminar y la pasa arriba

@@ -156,9 +156,33 @@
         display: flex;
         justify-content: center;
     }   
-    
-    .task-desc{
-        display: block;
+
+    .task{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 0; 
+    }
+
+    .focus{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 0; 
+        .task-desc{
+            display: block;
+        }
+    }
+
+    .delete-container{
+        display: flex;
+        justify-content: center;
+    }
+
+    .delete{
+        justify-content: center;
     }
 
     .task-detail{
