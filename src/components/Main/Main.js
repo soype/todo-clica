@@ -6,47 +6,25 @@ import TaskDetail from './Tasks/TaskDetail';
 import classes from './main.module.css';
 
 const Main = props => {
+    
+    // Qué tarea se va a destacar a la derecha
+    const [tarea, setTarea] = useState([props.tareas[0]]);
 
-
-    // Acá almaceno el id de la tarea que se va a desplegar
-    const [displayedTask, setDisplayedTask] = useState(0);
-
-
-    const [tareas, setTareas] = useState(
-    [
-        {
-            titulo: 'Sacar a pasear al perro',
-            descripcion: 'Dar una vuelta a la manzana con el perro.',
-            fecha_creacion: '26/10/2022 22:00',
-        },
-        {
-            titulo: 'Lavar los platos',
-            descripcion: 'Recordar usar esponja y detergente.',
-            fecha_creacion: '26/09/2022 10:00',
-        },
-        {
-            titulo: 'Llamar a la empresa de internet.',
-            descripcion: 'Pedir descuentos y amenazar con dar de baja el servicio.',
-            fecha_creacion: '28/04/2022 09:00',
-        },
-        {
-            titulo: 'Comprar alimento de tortuga.',
-            descripcion: 'Manuelita se esta quedando sin alimento :(',
-            fecha_creacion: '22/07/2022 12:00',
-        },
-    ]);
-
-    // Recibe el id desde Task List y cambia el estado de Displayed Task que luego
-    // pasa a TaskDetail, donde se va a desplegar el detalle de la tarea seleccionada.
+    // Recibe el id de la tarea que acaba de ser clickeada para destacar. Altera el useState.
     const displayTaskHandler = id =>{
-        setDisplayedTask(id);
+        setTarea(props.tareas.filter(tarea => tarea.id == id));
+    }
+
+    // Recibe el id de la tarea seleccionada para eliminar y la pasa arriba
+    const deleteHandler = id => {
+        props.onDelete(id)
     }
 
     return(
         <div className={classes.main}>
             <div className={classes["tasks-container"]}>
-                <TaskList tareas={tareas} displayId={displayedTask} onTaskFocus={displayTaskHandler}></TaskList>
-                <TaskDetail displayId={displayedTask} tareas={tareas}></TaskDetail>
+                <TaskList tareas={props.tareas} displayId={tarea[0].id} onDelete={deleteHandler} onTaskFocus={displayTaskHandler}></TaskList>
+                <TaskDetail tarea={tarea[0]} ></TaskDetail>
             </div>
             
         </div>

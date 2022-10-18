@@ -1,21 +1,21 @@
+import React, {useState} from 'react';
+
 import classes from '../main.module.css';
 
 
 const TaskDetail = props => {
 
-    // Las props recibidas son el id de la tarea y el listado de tareas.
-    // Filtro el listado de tareas con el id y despliego esa info.
-
     return(
         <div className={classes["task-detail"]}>
+            
             <h3 className={classes['task-detail-title']}>
-                {props.tareas[props.displayId].titulo}
+                {props.tarea.titulo}
             </h3>
             <p className={classes['task-detail-date']}>
-            Creado el {props.tareas[props.displayId].fecha_creacion.substring(0,10)} a las {props.tareas[props.displayId].fecha_creacion.substring(11,16)}
+            Creado el {props.tarea.fecha_creacion.substring(0,10)} a las {props.tarea.fecha_creacion.substring(11,17)}
             </p>
             <p className={classes['task-detail-desc']}>
-                {props.tareas[props.displayId].descripcion}
+                {props.tarea.descripcion}
             </p>
         </div>
     )

@@ -3,28 +3,40 @@
 //
 
 .modal{
+    position: absolute;
+    // left: 50%;
+    top: 0;
     z-index: 3;
     height: 100vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
+.modal-hidden{
+    display: none;
+}
+
 .backdrop{
     position:absolute;
-    z-index: 4;
     height: 100vh;
-    background-color: rgba(129, 129, 129, 0.8);
+    width: 100vw;
+    top: 0;
+    z-index: 3;
+    background-color: rgba(129, 129, 129, 0.6);
 }
 
 
 // Form
 
 .add-task{
+    position: absolute;
     display: flex;
     flex-direction: column;
     background-color: App.$green-light;
+    z-index: 4;
     padding: 1rem;
     border-radius: 1rem;
     box-shadow: 1px 1px 1rem rgba(0,0,0,0.3);
@@ -48,13 +60,14 @@
 .description{
     border: none;
     width: 12rem;
-    padding: 1rem;r
+    padding: 1rem;
     &:focus{
         background-color: aliceblue;
         outline: none;
     }
     border-radius: 1rem;
     resize: none;
+    margin-bottom: 1rem;
 
 }
 
