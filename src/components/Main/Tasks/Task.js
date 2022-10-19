@@ -20,10 +20,8 @@ const Task = (props) => {
   return (
     <div
       className={classes[focusClass()]}
-      id={props.id}
-      onClick={taskViewHandler}
     >
-      <div className={classes["task-info"]}>
+      <div className={classes["task-info"]} id={props.id} onClick={taskViewHandler}>
         <h4 className={classes["task-title"]}>{props.tarea.titulo}</h4>
         <p className={classes["task-date"]}>
           Creado el {props.tarea.fecha_creacion.substring(0, 10)} a las{" "}
